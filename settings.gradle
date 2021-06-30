@@ -1,0 +1,9 @@
+rootProject.name = "Musician"
+include ':app'
+include ':core-utils'
+include ':core-network'
+include ':feature-album-listening'
+include ':feature-album-network-api'
+include ':feature-album-network-impl'
+include ':core-ui'
+include ':core-serialization'

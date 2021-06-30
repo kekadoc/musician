@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/destination_album_list">
+
+    <fragment android:id="@+id/destination_album_list"
+        android:name="com.kekadoc.project.musician.ui.albums.AlbumListFragment"
+        android:label="@string/title_album_list"
+        tools:layout="@layout/fragment_album_list" >
+        <action
+            android:id="@+id/action_destination_album_list_to_destination_album"
+            app:destination="@id/destination_album" />
+    </fragment>
+
+    <dialog android:id="@+id/destination_album"
+        android:name="com.kekadoc.project.musician.ui.album.AlbumFragment"
+        android:label="@string/title_album"
+        tools:layout="@layout/fragment_album" >
+        <action
+            android:id="@+id/action_destination_album_to_destination_album_track"
+            app:destination="@id/destination_album_track" />
+        <action
+            android:id="@+id/action_destination_album_to_destination_track_listening"
+            app:destination="@id/destination_track_listening" />
+    </dialog>
+
+    <fragment android:id="@+id/destination_album_track"
+        android:name="com.kekadoc.project.musician.ui.AlbumTrackFragment"
+        android:label="@string/title_album_track"
+        tools:layout="@layout/fragment_album_track" />
+
+
+    <dialog android:id="@+id/destination_track_listening"
+        android:name="com.kekadoc.project.musician.ui.track.TrackListeningDialogFragment"
+        android:label="@string/title_track_listening"
+        tools:layout="@layout/fragment_track_listening" />
+
+</navigation>

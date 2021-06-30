@@ -1,0 +1,14 @@
+plugins {
+    id 'java-library'
+    id 'kotlin'
+    id 'org.jetbrains.kotlin.plugin.serialization' version "$serialization_version"
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_7
+    targetCompatibility = JavaVersion.VERSION_1_7
+}
+
+dependencies {
+    api "org.jetbrains.kotlinx:kotlinx-serialization-json:1.2.1"
+}

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <fragment
+        android:id="@+id/nav_host_fragment_activity"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:paddingBottom="56dp"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/mobile_navigation" />
+
+    <com.google.android.exoplayer2.ui.PlayerControlView
+        android:id="@+id/playerView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@android:color/transparent"
+        android:elevation="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:auto_show="true"
+        app:controller_layout_id="@layout/exo_player_control_custom_view"
+        app:fastforward_increment="10000"
+        app:hide_on_touch="false"
+        app:repeat_toggle_modes="none"
+        app:resize_mode="fixed_width"
+        app:rewind_increment="10000"
+        app:show_timeout="0"
+        app:surface_type="surface_view"
+        app:use_controller="true" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

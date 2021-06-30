@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Musician</string>
+    <string name="title_album_list">Album list</string>
+    <string name="title_album">Album</string>
+    <string name="title_album_track">Album track</string>
+    <string name="title_track_listening">Album track listening</string>
+
+    <string name="fragment_album_error_no_data">No data</string>
+
+</resources>
